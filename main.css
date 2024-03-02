@@ -4,39 +4,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
 /* Global styles */
+html {
+  background-color: #e7eaf6;
+}
+
 body {
   font-family: "Andika", sans-serif;
-  margin: 0;
   padding: 0;
   color: rgb(220, 223, 233);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  min-width: 640px;
+  width: 95%;
+  background-color: #38598b;
 }
 
 /* Header styles */
 header {
   font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: rgb(17, 63, 103);
-  padding: 0 2.5em;
+  text-align: center;
+}
+
+header > h1 {
+  margin: 0;
+  padding: .3em;
 }
 
 /* Heading styles */
-h1 {
+h1, h2 {
   color: #e7eaf6;
-}
-
-h2 {
-  color: #8289b9;
 }
 
 /* Navigation styles */
 
+body > header > nav.horizontalNav li {
+  width: 20%;
+}
+
+nav.horizontalNav li {
+  display: block;
+  float: left;
+  margin: 0 0 .8em 0;
+}
+
+nav.horizontalNav a {
+  display: block;
+  text-align: center;
+}
+
 nav > ul {
-  display: flex;
-  padding: 0;
-  gap: 2em;
   font-size: 18px;
   list-style: none;
 }
@@ -44,6 +64,7 @@ nav > ul {
 nav > ul > li > a {
   color: #e7eaf6;
   font-weight: bold;
+  text-decoration: none;
 }
 
 nav > ul > li > a:hover {
@@ -52,9 +73,6 @@ nav > ul > li > a:hover {
 
 /* Section styles */
 section {
-  margin: 2em;
-  background-color: #38598b;
-  border-radius: 1em;
   padding: 1em;
 }
 
@@ -66,17 +84,27 @@ section > p > a:hover {
   color: #bac1f3;
 }
 
+section#leftColumn {
+  clear: left;
+  float: left;
+  padding: 2em;
+  width: 60%;
+  background-color: rgb(17, 63, 103);
+}
+
+section#rightColumn {
+  float: left;
+  width: 30%;
+}
+
 /* Footer styles */
 footer {
+  clear: left;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: rgb(17, 63, 103);
   color: #e7eaf6;
-  padding: 1em 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 footer > a {
@@ -84,19 +112,115 @@ footer > a {
 }
 
 /* Additional styles */
-#page-update {
-  margin: 0;
+
+#website_note {
+  font-size: 12px;
 }
 
-.hobbies-website {
+/* NOTE: Originally I had this dynamic but w3c gave concerns for using the same id's. */
+
+/* Watchboxd Styles */
+div.projects-section{
+  padding: 2em;
+}
+
+section#watchboxd-tile{
+  background-color: rgb(17, 63, 103);
+  padding: 1em;
+  border-radius: 2em;
+  margin-top: .5em; /* May change later */
+  display: flex;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  border: 2px #e7eaf6 solid;
+}
+
+div#watchboxd-details > h2{
+  font-weight: bold;
+}
+
+div#watchboxd-links {
   display: flex;
   gap: 1em;
 }
 
-.hobbies {
-  width: 25vw;
+div#watchboxd-links > a {
+  color: #e7eaf6;
 }
 
-.favorite-website {
-  width: 75vw;
+div#watchboxd-links > a:hover {
+  color: #8d94c5;
+}
+
+section#watchboxd-tile > img#watchboxd-image {
+  border-radius: 1em;
+}
+
+/* Asante Styles */
+section#asante-tile{
+  background-color: rgb(17, 63, 103);
+  padding: 1em;
+  border-radius: 2em;
+  margin-top: .5em; /* May change later */
+  display: flex;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  border: 2px #e7eaf6 solid;
+}
+
+div#asante-details > h2{
+  font-weight: bold;
+}
+
+div#asante-links {
+  display: flex;
+  gap: 1em;
+}
+
+div#asante-links > a {
+  color: #e7eaf6;
+}
+
+div#asante-links > a:hover {
+  color: #8d94c5;
+}
+
+section#asante-tile > img#asante-image {
+  border-radius: 1em;
+}
+
+/* Relive Styles */
+section#relive-tile{
+  background-color: rgb(17, 63, 103);
+  padding: 1em;
+  border-radius: 2em;
+  margin-top: .5em; /* May change later */
+  display: flex;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  border: 2px #e7eaf6 solid;
+}
+
+div#relive-details > h2{
+  font-weight: bold;
+}
+
+div#relive-links {
+  display: flex;
+  gap: 1em;
+}
+
+div#relive-links > a {
+  color: #e7eaf6;
+}
+
+div#relive-links > a:hover {
+  color: #8d94c5;
+}
+
+section#relive-tile > img#relive-image {
+  border-radius: 1em;
 }
